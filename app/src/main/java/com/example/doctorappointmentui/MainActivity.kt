@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.doctorappointmentui.presentation.screens.HomeScreen
+import com.example.doctorappointmentui.presentation.screens.MainScreen
 import com.example.doctorappointmentui.ui.theme.DoctorAppointmentUITheme
 
 class MainActivity : ComponentActivity() {
@@ -20,24 +21,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             DoctorAppointmentUITheme {
-                HomeScreen()
+               MainScreen()
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    DoctorAppointmentUITheme {
-        Greeting("Android")
-    }
-}
